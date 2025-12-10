@@ -1,9 +1,64 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@100..900&display=swap");
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-  body {
-    @apply font-poppins;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+@layer components {
+  .nav__link {
+    @apply relative inline-block pb-2;
   }
-} */
+  
+  .nav__link::after {
+    content: '';
+    @apply absolute left-0 -bottom-2 w-0 h-0.5 bg-title-color transition-all duration-300;
+  }
+  
+  .nav__link:hover::after {
+    @apply w-3/5;
+  }
+}
+
+@layer base {
+  body{
+    @apply font-body-font
+  }
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+
+/*Media queries*/
