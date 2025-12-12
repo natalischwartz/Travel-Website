@@ -1,5 +1,6 @@
 import Header from "../components/Header"
 import Home from "../components/Home";
+import Destination from "../components/Destination";
 
 const Index = () =>{
     return(
@@ -7,6 +8,7 @@ const Index = () =>{
             <Header/>
             <main>
                 <Home/>
+                <Destination/>
 
             </main>
 
