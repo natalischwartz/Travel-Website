@@ -1,4 +1,55 @@
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin, ArrowUp } from "lucide-react";
+import { useState, useEffect } from "react";
+
+
+
+ const ScrollUpButton = () =>{
+        const [isVisible, setIsVisible] = useState(false);
+
+// 1. Función para mostrar/ocultar el botón
+  const toggleVisibility = () => {
+
+
+    if (typeof window === 'undefined') return;
+
+    if (window.scrollY > 350) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+
+  // 2. Función para hacer scroll hacia arriba
+  const scrollToTop = () => {
+
+    if (typeof window === 'undefined') return;
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  // 3. useEffect para agregar/remover el event listener
+  useEffect(() => {
+
+    if (typeof window === 'undefined') return;
+    window.addEventListener('scroll', toggleVisibility);
+    
+    // Limpiar el event listener al desmontar
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
+  return(
+    <ArrowUp size={30} className={`show-scroll text-title-color fixed right-4   bg-body-color shadow-md inline-flex p-2 rounded z-10 hover:translate-y-[-.5rem] transition duration-300 cursor-pointer  ${isVisible ? "bottom-4 opacity-100 visible" : "bottom-[-50%] opacity-0 invisible"}`} id="scroll-up" onClick={scrollToTop} aria-label="Volver arriba"/>
+  )
+
+
+ }
+
 
 const Footer =() =>{
 
@@ -93,13 +144,11 @@ const Footer =() =>{
 
             </span>
             <span className="text-text-color text-small-font-size">Desarrollado por Natali Schwartz</span>
-
-
-
-
-
-
+         {/* Scroll up */}
+         <ScrollUpButton/>
+        
         </footer>
+       
     )
 }
 
