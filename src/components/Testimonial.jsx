@@ -52,7 +52,7 @@ const Testimonial = () => {
 
 
 return(
-    <section className="testimonial section" id="testimonial">
+    <section className="testimonial section" id="testimonials">
         <h2 className="section__title text-big-font-size text-title-color text-center mb-8">What Are <br /> They Saying?</h2>
 
         <div className="testimonial__container justify-center gap-0 container grid">

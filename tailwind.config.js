@@ -19,6 +19,12 @@ export default {
           "opacity-color-20": "hsla(0, 0%, 90%, .2)",
 
         // ========== MODO OSCURO ==========
+        "dark-title-color": "hsl(220, 8%, 90%)",
+          "dark-text-color": "hsl(220, 8%, 70%)",
+          "dark-body-color": "hsl(220, 8%, 8%)",
+          "dark-container-color": "hsl(220, 8%, 12%)",
+          "dark-opacity-color-30": "hsla(0, 0%, 15%, .3)",
+          "dark-opacity-color-20": "hsla(0, 0%, 15%, .2)",
       },
       fontFamily: {
         "body-font":"Montserrat, sans-serif",

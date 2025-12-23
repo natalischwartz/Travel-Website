@@ -6,7 +6,7 @@ const Destination = ()  =>{
 
 return(
     <section className="destination section" id="destination">
-        <h2 className="section__title text-big-font-size text-title-color text-center mb-8">Find Your Best <br /> Destination</h2>
+        <h2 className="section__title text-big-font-size text-title-color dark:text-dark-title-color text-center mb-8">Find Your Best <br /> Destination</h2>
 
         <div className="destination__container grid-cols-[300px] justify-center container grid">
             <article className="destination__card group  relative rounded-3xl overflow-hidden">

@@ -50,7 +50,7 @@ const Home = () =>{
     return(
         <section id="home" className="home section pt-16 relative">
             <img src="/home-bg.png" alt="image Hero" className="home__bg  absolute top-0 left-0  w-full h-full object-cover object-center" />
-            <div className="home__blur absolute top-0 left-0 w-full h-full bg-opacity-color-20 backdrop-blur-2xl transition-colors duration-300"></div>
+            <div className="home__blur absolute top-0 left-0 w-full h-full bg-opacity-color-20 dark:bg-dark-opacity-color-20 backdrop-blur-2xl transition-colors duration-300"></div>
 
             <div className="home__container relative pt-8 pb-12 gap-y-12 container grid">
                 <div className="home__data text-center text-white-color">

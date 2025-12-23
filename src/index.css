@@ -33,18 +33,46 @@ html {
   .nav__link:hover::after {
     @apply w-3/5;
   }
+
 }
 
 @layer base {
   body{
-    @apply font-body-font
+    @apply font-body-font dark:bg-dark-body-color;
+    
+  }
+
+}
+
+@layer utilities {
+  .destination__data {
+    @apply dark:bg-dark-opacity-color-30;
+  }
+
+  .section__title,
+  .testimonial__description,
+  .testimonial__title,
+  .testimonial__profile,
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom,
+  .testimonial__info h3{
+    @apply dark:text-dark-title-color;
+  }
+
+  .testimonial__swiper{
+    @apply dark:bg-dark-container-color;
+
+  }
+
+  .show-scroll{
+    @apply dark:bg-dark-container-color dark:text-dark-title-color;
   }
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
-  margin-inline: 1.5rem;
+  /* margin-inline: 1.5rem; */
 }
 
 .grid {
